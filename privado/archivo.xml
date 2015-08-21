@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- autor: Moises -->
+
+<Clientes>
+  <Cliente>
+    <ClienteId>FER0394</ClienteId>
+    <Nombre>Fernando</Nombre>
+    <Apellidos>Luis Sanchez</Apellidos>
+    <Profesion>Ingeniero</Profesion>
+  </Cliente>
+  <Cliente>
+    <ClienteId>CAV4574</ClienteId>
+    <Nombre>Carolina</Nombre>
+    <Apellidos>Villacorta Acosta</Apellidos>
+    <Profesion>Farmaceutica</Profesion>
+  </Cliente>
+</Clientes>

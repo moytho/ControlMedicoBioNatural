@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../css/estiloslider.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+    <!--SCRIPT PARA CARGAR IMAGENES AL SERVIDOR -->
+<script type="text/javascript" language="javascript">
+
+    $(document).ready(function () {
+        var slides;
+        
+
+        $(".next").click(function () {
+            mover('right');
+        });
+
+
+        $(".prev").click(function () {
+            mover('left');
+        });
+        slides = $('#slider .slidesContainer > .slide');
+        $('#slider .slidesContainer').css('width', slides[0].offsetWidth * slides.length);
+
+        function mover(direction) {
+
+            
+
+            
+
+            
+
+            var direction = 'right';
+
+            //Calcula la posiciÃ³n actual del contenedor
+            position = $('#slider').scrollLeft();
+            console.log("position " + position);
+            //Calcula la anchura total menos el Ãºltimo slide.
+            //Se usa para calcular cuando el scroll llega al final.
+            totalWidth = (slides.length * slides[0].offsetWidth) - slides[0].offsetWidth
+
+            //Se comprueba la variable direction para hacer el scroll hacia izquierda o derecha
+            switch (direction) {
+                case 'right': //Derecha
+                    if (position + slides[0].offsetWidth > totalWidth) { //Si la siguiente posiciÃ³n se sale del contenedor, vuelve al principio.
+                        $('#slider:not(:animated)').animate({ scrollLeft: 0 }, 1000);
+                    } else { //Si no es el final, suma a la posiciÃ³n actual la anchura del slide.
+                        $('#slider:not(:animated)').animate({ scrollLeft: position + slides[0].offsetWidth }, 1000);
+                    }
+                    break;
+
+                case 'left': //Izquierda
+                    if (position - slides[0].offsetWidth < 0) { //Si la siguiente posiciÃ³n se sale del contenedor, vuelve al final.
+                        $('#slider:not(:animated)').animate({ scrollLeft: totalWidth }, 1000);
+                    } else { //Si no es el final, resta a la posiciÃ³n actual la anchura del slide.
+                        $('#slider:not(:animated)').animate({ scrollLeft: position - slides[0].offsetWidth }, 1000);
+                    }
+                    break;
+            }
+
+        }
+
+    });
+
+
+</script>
+</head>
+<body>
+                <div class="divprev">
+                      <a href="#siguiente" class="next" title="Siguiente"></a>
+      
+                </div>
+                <div class="sliderContainer">
+
+
+                    <div id="slider">
+                        <div class="slidesContainer">
+                            <div class="slide" style="background:red;"></div>
+                            <div class="slide" style="background:blue;"></div>
+                            <div class="slide" style="background:yellow;"></div>
+                            <div class="slide" style="background:orange;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="divnext">
+                <a href="#anterior" class="prev" title="Anterior"></a>
+                </div>
+
+                
+
+
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+﻿.divprev, .divnext 
+{
+    min-width:40px; 
+    float:left; 
+    height: 550px;
+    position:relative;
+    margin:0;
+    }
+.sliderContainer{
+    width: 600px;
+    height: 550px;
+    margin:0;
+    float:left;
+}
+#slider {
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    width: 600px;
+    height: 550px;
+    background: #FFF;
+    overflow: hidden;
+    float: left;
+    margin: auto;
+}
+#slider .slide{
+    width: 600px;
+    height: 550px;
+    float: left;
+}
+.prev, .next{
+    display: block;
+    height: 56px;
+    width: 56px;
+    position: relative;
+    top: 247px;
+}
+.prev{
+    background: url('../images/slider-prev.png') no-repeat;
+    background-position: 0 0;
+    left: 0;
+}
+.prev:hover{
+    background-position: 0 -56px;
+}
+.next{
+    background: url('../images/slider-next.png') no-repeat;
+    background-position: 0 0;
+    right: 0;
+}
+.next:hover{
+    background-position: 0 -56px;
+}
+
+

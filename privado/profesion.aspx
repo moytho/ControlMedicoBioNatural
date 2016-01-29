@@ -307,6 +307,7 @@
             <li class="icn_folder"><a href="empleadopuesto.aspx">Cargos</a></li>
             		    <li class="icn_folder"><a style="color:#04B404;text-shadow: 1px 1px white; font-weight:bolder;" href="#">Profesiones</a></li>
             <li class="icn_folder"><a href="nacionalidad.aspx">Nacionalidades</a></li>
+            <li class="icn_folder"><a runat="server" href="empresa.aspx">Datos Clinica</a></li>
 		
         </ul>
 		<h3>USUARIOS</h3>

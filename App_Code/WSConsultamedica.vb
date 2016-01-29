@@ -257,23 +257,49 @@ Public Class WSConsultamedica
 
                     doc.Open()
 
+                    Dim TablaDatosClinica As DataTable = cargar_datatable("select top 1 nombre,telefono,fax,direccion,correo,eslogan from empresa")
+                    If TablaDatosClinica.Rows.Count > 0 Then
 
+                        'End If
+                        'For i = 0 To TablaRecetas.Rows.Count - 1
+                        'EMPEZAMOS ARMANDO EL OBJETO
+                        'Dim Elemento As New Recetario
+                        'Elemento.idreceta = TablaRecetas.Rows(i).Item("idreceta").ToString
+                        'Elemento.fecha = TablaRecetas.Rows(i).Item("fecha").ToString
 
-                    Dim datoEmpresa As New Chunk("BIO * NATURAL", FontFactory.GetFont("Arial", 16, iTextSharp.text.Font.BOLD))
-                    Dim ParrafoEmpresa As New Paragraph(datoEmpresa)
-                    ParrafoEmpresa.Alignment = Element.ALIGN_CENTER
-                    doc.Add(ParrafoEmpresa)
+                        Dim datoEmpresa As New Chunk(TablaDatosClinica.Rows(0).Item("nombre").ToString, FontFactory.GetFont("Arial", 14, iTextSharp.text.Font.BOLD))
+                        Dim ParrafoEmpresa As New Paragraph(datoEmpresa)
+                        ParrafoEmpresa.Alignment = Element.ALIGN_CENTER
+                        doc.Add(ParrafoEmpresa)
 
-                    Dim datoEmpresad As New Chunk("7a Av. A 3-54 Zona 9, Ciudad de Guatemala", FontFactory.GetFont("Arial", 10, iTextSharp.text.Font.BOLD))
-                    Dim ParrafoEmpresad As New Paragraph(datoEmpresad)
-                    ParrafoEmpresad.Alignment = Element.ALIGN_CENTER
-                    doc.Add(ParrafoEmpresad)
+                        Dim datoEmpresad As New Chunk(TablaDatosClinica.Rows(0).Item("direccion").ToString, FontFactory.GetFont("Arial", 10, iTextSharp.text.Font.BOLD))
+                        Dim ParrafoEmpresad As New Paragraph(datoEmpresad)
+                        ParrafoEmpresad.Alignment = Element.ALIGN_CENTER
+                        doc.Add(ParrafoEmpresad)
 
-                    Dim datoEmpresat As New Chunk("(502) 2331-7935", FontFactory.GetFont("Arial", 10, iTextSharp.text.Font.BOLD))
-                    Dim ParrafoEmpresat As New Paragraph(datoEmpresat)
-                    ParrafoEmpresat.Alignment = Element.ALIGN_CENTER
-                    doc.Add(ParrafoEmpresat)
+                        Dim datoEmpresat As New Chunk(TablaDatosClinica.Rows(0).Item("telefono").ToString, FontFactory.GetFont("Arial", 10, iTextSharp.text.Font.BOLD))
+                        Dim ParrafoEmpresat As New Paragraph(datoEmpresat)
+                        ParrafoEmpresat.Alignment = Element.ALIGN_CENTER
+                        doc.Add(ParrafoEmpresat)
 
+                    Else
+
+                        Dim datoEmpresa As New Chunk("BIO * NATURAL", FontFactory.GetFont("Arial", 16, iTextSharp.text.Font.BOLD))
+                        Dim ParrafoEmpresa As New Paragraph(datoEmpresa)
+                        ParrafoEmpresa.Alignment = Element.ALIGN_CENTER
+                        doc.Add(ParrafoEmpresa)
+
+                        Dim datoEmpresad As New Chunk("7a Av. A 3-54 Zona 9, Ciudad de Guatemala", FontFactory.GetFont("Arial", 10, iTextSharp.text.Font.BOLD))
+                        Dim ParrafoEmpresad As New Paragraph(datoEmpresad)
+                        ParrafoEmpresad.Alignment = Element.ALIGN_CENTER
+                        doc.Add(ParrafoEmpresad)
+
+                        Dim datoEmpresat As New Chunk("(502) 2331-7935", FontFactory.GetFont("Arial", 10, iTextSharp.text.Font.BOLD))
+                        Dim ParrafoEmpresat As New Paragraph(datoEmpresat)
+                        ParrafoEmpresat.Alignment = Element.ALIGN_CENTER
+                        doc.Add(ParrafoEmpresat)
+
+                    End If
                     'doc.Add(New Paragraph("͏͏", FontFactory.GetFont("Arial", 10, iTextSharp.text.Font.BOLD)))
 
 
@@ -624,22 +650,49 @@ Public Class WSConsultamedica
 
                     doc.Open()
 
+                    Dim TablaDatosClinica As DataTable = cargar_datatable("select top 1 nombre,telefono,fax,direccion,correo,eslogan from empresa")
+                    If TablaDatosClinica.Rows.Count > 0 Then
 
+                        'End If
+                        'For i = 0 To TablaRecetas.Rows.Count - 1
+                        'EMPEZAMOS ARMANDO EL OBJETO
+                        'Dim Elemento As New Recetario
+                        'Elemento.idreceta = TablaRecetas.Rows(i).Item("idreceta").ToString
+                        'Elemento.fecha = TablaRecetas.Rows(i).Item("fecha").ToString
 
-                    Dim datoEmpresa As New Chunk("BIO * NATURAL", FontFactory.GetFont("Arial", 16, iTextSharp.text.Font.BOLD))
-                    Dim ParrafoEmpresa As New Paragraph(datoEmpresa)
-                    ParrafoEmpresa.Alignment = Element.ALIGN_CENTER
-                    doc.Add(ParrafoEmpresa)
+                        Dim datoEmpresa As New Chunk(TablaDatosClinica.Rows(0).Item("nombre").ToString, FontFactory.GetFont("Arial", 14, iTextSharp.text.Font.BOLD))
+                        Dim ParrafoEmpresa As New Paragraph(datoEmpresa)
+                        ParrafoEmpresa.Alignment = Element.ALIGN_CENTER
+                        doc.Add(ParrafoEmpresa)
 
-                    Dim datoEmpresad As New Chunk("7a Av. A 3-54 Zona 9, Ciudad de Guatemala", FontFactory.GetFont("Arial", 10, iTextSharp.text.Font.BOLD))
-                    Dim ParrafoEmpresad As New Paragraph(datoEmpresad)
-                    ParrafoEmpresad.Alignment = Element.ALIGN_CENTER
-                    doc.Add(ParrafoEmpresad)
+                        Dim datoEmpresad As New Chunk(TablaDatosClinica.Rows(0).Item("direccion").ToString, FontFactory.GetFont("Arial", 10, iTextSharp.text.Font.BOLD))
+                        Dim ParrafoEmpresad As New Paragraph(datoEmpresad)
+                        ParrafoEmpresad.Alignment = Element.ALIGN_CENTER
+                        doc.Add(ParrafoEmpresad)
 
-                    Dim datoEmpresat As New Chunk("(502) 2331-7935", FontFactory.GetFont("Arial", 10, iTextSharp.text.Font.BOLD))
-                    Dim ParrafoEmpresat As New Paragraph(datoEmpresat)
-                    ParrafoEmpresat.Alignment = Element.ALIGN_CENTER
-                    doc.Add(ParrafoEmpresat)
+                        Dim datoEmpresat As New Chunk(TablaDatosClinica.Rows(0).Item("telefono").ToString, FontFactory.GetFont("Arial", 10, iTextSharp.text.Font.BOLD))
+                        Dim ParrafoEmpresat As New Paragraph(datoEmpresat)
+                        ParrafoEmpresat.Alignment = Element.ALIGN_CENTER
+                        doc.Add(ParrafoEmpresat)
+
+                    Else
+
+                        Dim datoEmpresa As New Chunk("BIO * NATURAL", FontFactory.GetFont("Arial", 16, iTextSharp.text.Font.BOLD))
+                        Dim ParrafoEmpresa As New Paragraph(datoEmpresa)
+                        ParrafoEmpresa.Alignment = Element.ALIGN_CENTER
+                        doc.Add(ParrafoEmpresa)
+
+                        Dim datoEmpresad As New Chunk("7a Av. A 3-54 Zona 9, Ciudad de Guatemala", FontFactory.GetFont("Arial", 10, iTextSharp.text.Font.BOLD))
+                        Dim ParrafoEmpresad As New Paragraph(datoEmpresad)
+                        ParrafoEmpresad.Alignment = Element.ALIGN_CENTER
+                        doc.Add(ParrafoEmpresad)
+
+                        Dim datoEmpresat As New Chunk("(502) 2331-7935", FontFactory.GetFont("Arial", 10, iTextSharp.text.Font.BOLD))
+                        Dim ParrafoEmpresat As New Paragraph(datoEmpresat)
+                        ParrafoEmpresat.Alignment = Element.ALIGN_CENTER
+                        doc.Add(ParrafoEmpresat)
+
+                    End If
 
                     'doc.Add(New Paragraph("͏͏", FontFactory.GetFont("Arial", 10, iTextSharp.text.Font.BOLD)))
 
@@ -649,7 +702,7 @@ Public Class WSConsultamedica
                     ParrafoDocumento.Alignment = Element.ALIGN_CENTER
                     doc.Add(ParrafoDocumento)
 
-                    
+
                     doc.Add(New Paragraph("      _______________________________________________________________________________", FontFactory.GetFont("Arial", 13, iTextSharp.text.Font.BOLD)))
 
                     doc.Add(New Paragraph("͏͏", FontFactory.GetFont("Arial", 10, iTextSharp.text.Font.BOLD)))
@@ -728,7 +781,7 @@ Public Class WSConsultamedica
                     'doc.Add(New Paragraph("͏͏", FontFactory.GetFont("Arial", 10, iTextSharp.text.Font.BOLD)))
 
 
-                    
+
 
                     '################ I N D I C A C I O N E S ###############
                     SqlConsultaReceta = "select t.Descripcion codigotratamiento,t.Otros detalletratamiento " +
@@ -781,7 +834,7 @@ Public Class WSConsultamedica
                     SqlConsultaReceta = "select s.descripcion sintoma,s.observaciones observaciones " +
                     "from Recetas r " +
                     "INNER JOIN sintoma s ON r.idsintoma=s.idsintoma " +
-                    "where r.CodR=" & idreceta & " and (s.idsintoma!='')"
+                    "where r.CodR=" & idReceta & " and (s.idsintoma!='')"
                     comando.CommandText = SqlConsultaReceta
                     Dim LectorSintomas As SqlDataReader = comando.ExecuteReader
                     doc.Add(New Paragraph("͏͏", FontFactory.GetFont("Arial", 10, iTextSharp.text.Font.BOLD)))
@@ -1292,20 +1345,48 @@ Public Class WSConsultamedica
                         doc.Add(jpg)
                     End Try
 
-                    Dim datoEmpresa As New Chunk("BIO * NATURAL", FontFactory.GetFont("Arial", 14, iTextSharp.text.Font.BOLD))
-                    Dim ParrafoEmpresa As New Paragraph(datoEmpresa)
-                    ParrafoEmpresa.Alignment = Element.ALIGN_CENTER
-                    doc.Add(ParrafoEmpresa)
+                    Dim TablaDatosClinica As DataTable = cargar_datatable("select top 1 nombre,telefono,fax,direccion,correo,eslogan from empresa")
+                    If TablaDatosClinica.Rows.Count > 0 Then
 
-                    Dim datoEmpresad As New Chunk("7a Av. A 3-54 Zona 9, Ciudad de Guatemala", FontFactory.GetFont("Arial", 10, iTextSharp.text.Font.BOLD))
-                    Dim ParrafoEmpresad As New Paragraph(datoEmpresad)
-                    ParrafoEmpresad.Alignment = Element.ALIGN_CENTER
-                    doc.Add(ParrafoEmpresad)
+                        'End If
+                        'For i = 0 To TablaRecetas.Rows.Count - 1
+                        'EMPEZAMOS ARMANDO EL OBJETO
+                        'Dim Elemento As New Recetario
+                        'Elemento.idreceta = TablaRecetas.Rows(i).Item("idreceta").ToString
+                        'Elemento.fecha = TablaRecetas.Rows(i).Item("fecha").ToString
 
-                    Dim datoEmpresat As New Chunk("(502) 2331-7935", FontFactory.GetFont("Arial", 10, iTextSharp.text.Font.BOLD))
-                    Dim ParrafoEmpresat As New Paragraph(datoEmpresat)
-                    ParrafoEmpresat.Alignment = Element.ALIGN_CENTER
-                    doc.Add(ParrafoEmpresat)
+                        Dim datoEmpresa As New Chunk(TablaDatosClinica.Rows(0).Item("nombre").ToString, FontFactory.GetFont("Arial", 14, iTextSharp.text.Font.BOLD))
+                        Dim ParrafoEmpresa As New Paragraph(datoEmpresa)
+                        ParrafoEmpresa.Alignment = Element.ALIGN_CENTER
+                        doc.Add(ParrafoEmpresa)
+
+                        Dim datoEmpresad As New Chunk(TablaDatosClinica.Rows(0).Item("direccion").ToString, FontFactory.GetFont("Arial", 10, iTextSharp.text.Font.BOLD))
+                        Dim ParrafoEmpresad As New Paragraph(datoEmpresad)
+                        ParrafoEmpresad.Alignment = Element.ALIGN_CENTER
+                        doc.Add(ParrafoEmpresad)
+
+                        Dim datoEmpresat As New Chunk(TablaDatosClinica.Rows(0).Item("telefono").ToString, FontFactory.GetFont("Arial", 10, iTextSharp.text.Font.BOLD))
+                        Dim ParrafoEmpresat As New Paragraph(datoEmpresat)
+                        ParrafoEmpresat.Alignment = Element.ALIGN_CENTER
+                        doc.Add(ParrafoEmpresat)
+
+                    Else
+
+                        Dim datoEmpresa As New Chunk("BIO * NATURAL", FontFactory.GetFont("Arial", 14, iTextSharp.text.Font.BOLD))
+                        Dim ParrafoEmpresa As New Paragraph(datoEmpresa)
+                        ParrafoEmpresa.Alignment = Element.ALIGN_CENTER
+                        doc.Add(ParrafoEmpresa)
+
+                        Dim datoEmpresad As New Chunk("7a Av. A 3-54 Zona 9, Ciudad de Guatemala", FontFactory.GetFont("Arial", 10, iTextSharp.text.Font.BOLD))
+                        Dim ParrafoEmpresad As New Paragraph(datoEmpresad)
+                        ParrafoEmpresad.Alignment = Element.ALIGN_CENTER
+                        doc.Add(ParrafoEmpresad)
+
+                        Dim datoEmpresat As New Chunk("(502) 2331-7935", FontFactory.GetFont("Arial", 10, iTextSharp.text.Font.BOLD))
+                        Dim ParrafoEmpresat As New Paragraph(datoEmpresat)
+                        ParrafoEmpresat.Alignment = Element.ALIGN_CENTER
+                        doc.Add(ParrafoEmpresat)
+                    End If
 
                     'doc.Add(New Paragraph("͏͏", FontFactory.GetFont("Arial", 10, iTextSharp.text.Font.BOLD)))
 

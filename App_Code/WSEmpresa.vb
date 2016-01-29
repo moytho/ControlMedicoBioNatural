@@ -160,7 +160,7 @@ Public Class WSEmpresa
 
     <WebMethod()> _
     Public Function EmpresaDatos() As List(Of ClaseEmpresa)
-        Dim SQLConsulta As String = "select idempresa,nombre from empresa where estatus=1"
+        Dim SQLConsulta As String = "select idempresa,nombre from empresa"
         Dim result As List(Of [ClaseEmpresa]) = New List(Of ClaseEmpresa)()
         Using connection As New SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings("strconexion").ConnectionString)
             Try

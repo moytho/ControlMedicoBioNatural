@@ -266,7 +266,7 @@
             <h3>PACIENTES</h3>
 		<ul class="toggle">
             <li class="icn_new_article"><a href="pacienteconsulta.aspx">Consulta</a></li>
-			<li class="icn_edit_article"><a href="#" >Paciente</a></li>
+			<li class="icn_edit_article"><a href="paciente.aspx" >Paciente</a></li>
 			<li class="icn_categories"><a  href="pacientehistorial.aspx">Historial</a></li>
 		</ul>
         <h3>MEDICAMENTOS</h3>
@@ -288,6 +288,7 @@
             <li class="icn_folder"><a href="empleadopuesto.aspx">Cargos</a></li>
             		    <li class="icn_folder"><a href="profesion.aspx">Profesiones</a></li>
             <li class="icn_folder"><a href="nacionalidad.aspx">Nacionalidades</a></li>
+            <li class="icn_folder"><a runat="server" href="empresa.aspx">Datos Clinica</a></li>
 		
         </ul>
 		<h3>USUARIOS</h3>

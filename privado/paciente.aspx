@@ -1603,10 +1603,7 @@ display:block;
 
 </head>
 <body>
-<form id="formulario" runat="server" >
 
-<asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" EnablePageMethods="true">
-</asp:ToolkitScriptManager>
 	<header id="header">
 		<hgroup>
 			<h1 class="site_title"><a href="menu.aspx">BIO * NATURAL Online</a></h1>
@@ -1657,6 +1654,7 @@ display:block;
             <li class="icn_folder"><a href="empleadopuesto.aspx">Cargos</a></li>
             		    <li class="icn_folder"><a href="profesion.aspx">Profesiones</a></li>
             <li class="icn_folder"><a href="nacionalidad.aspx">Nacionalidades</a></li>
+            <li class="icn_folder"><a runat="server" href="empresa.aspx">Datos Clinica</a></li>
 		
         </ul>
 		<h3>USUARIOS</h3>
@@ -1680,7 +1678,10 @@ display:block;
 				
                 		<article id="divbusqueda" class="module width_full">
 			            <header>
-                            <h3>BUSQUEDA</h3><asp:HiddenField ID="hidpaciente" Value="" runat="server" />
+                            <h3>BUSQUEDA</h3>
+                            
+                            <input type="hidden" id="hidpaciente" value="" runat="server" />
+
                         </header>
                         <div class="module_content">
                         <div style="width:90%">
@@ -2194,7 +2195,6 @@ display:block;
                 </article>
 
 
-</form>
 </body>
 
 
